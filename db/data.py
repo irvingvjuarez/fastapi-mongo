@@ -9,9 +9,16 @@ fake = Faker()
 
 users_data = [
 	User(
-		id=fake.unique.random_int(),
+		id=round(fake.unique.random_int()),
 		name=fake.first_name(),
 		last_name=fake.last_name(),
 		age=randint(20, 70)
 	) for _ in range(10)
 ]
+
+users_data.append(User(**{
+	"id": 8256,
+	"name": "Jared",
+	"last_name": "Peterson",
+	"age": 42
+}))
