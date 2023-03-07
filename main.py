@@ -11,9 +11,8 @@ async def root():
 	}
 
 @app.get("/users")
-async def users():
-
-	return users_data
+async def users(skip: int = 0, limit: int = len(users_data)):
+	return users_data[skip:skip + limit]
 
 @app.get("/users/{user_id}")
 async def user_detail(user_id: int):

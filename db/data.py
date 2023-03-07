@@ -13,7 +13,7 @@ users_data = [
 		name=fake.first_name(),
 		last_name=fake.last_name(),
 		age=randint(20, 70)
-	) for _ in range(10)
+	) for _ in range(50)
 ]
 
 users_data.append(User(**{
